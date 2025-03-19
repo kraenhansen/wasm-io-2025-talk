@@ -19,9 +19,40 @@ Kræn Hansen & Robert Pasiński
 -->
 
 ---
+src: ./pages/about-us.md
+---
+
+---
+src: ./pages/why-react-native.md
+---
+
+---
+src: ./pages/why-wasm-in-react-native.md
+---
+
+---
+src: ./pages/wasmer-attempt.md
+---
+
+---
+src: ./pages/polygen.md
+---
+
+---
 layout: section
+transition: null
 ---
 
 # 👋 Thanks for your time 💙
 
-Slides & code https://github.com/kraenhansen/wasm-io-2025-talk
+<br>
+
+Slides https://github.com/kraenhansen/wasm-io-2025-talk
+
+Polygen https://github.com/callstackincubator/polygen
+
+<!--
+ - You can ship WASM for React Native (Still early)
+ - What future would you like to see?
+Any questions?
+-->
