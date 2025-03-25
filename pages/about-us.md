@@ -49,7 +49,7 @@ Senior Software Developer @ Callstack
 - Interested in anything programming related
   - Web
   - Mobile apps
-  - Low level internals
+  - Low-level juicy internals
 - Working in incubator team @ Callstack
   - Improving developer experience
   - Testing innovative approaches
