@@ -10,13 +10,26 @@ fonts:
   weights: '200,400,600'
 ---
 
-# Running WASM<br>in React Native apps
+<h1 class="text-center">Running WASM<br>in React Native apps</h1>
 
-Kræn Hansen & Robert Pasiński
+<div class="grid grid-cols-2 gap-4 text-center">
+  <div>
+    <p>Kræn Hansen</p>
+    <img src="./mongodb-logo.svg" style="height:2rem;margin:auto;" />
+  </div>
+  <div>
+    <p>Robert Pasiński</p>
+    <img src="./callstack-logo.webp" style="height:2rem;margin:auto;" />
+  </div>
+</div>
 
 <!--
 
 -->
+
+---
+src: ./pages/teaser.md
+---
 
 ---
 src: ./pages/about-us.md
