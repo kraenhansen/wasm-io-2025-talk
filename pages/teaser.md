@@ -3,14 +3,21 @@ layout: section
 transition: null
 ---
 
-# What! 🙀 <v-click>Doesn't WebAssembly already run everywhere?</v-click>
+# Wait a minute 🤔 Can you?
+
+<v-clicks>
+
+## WebAssembly already runs everywhere - right?
+## Well ... sort of 😬
+
+</v-clicks>
 
 <!--
-Kræn: I see it in your eyes: Confusion ... despair
-[click] Doesn't WebAssembly already run everywhere?
+Kræn: Can you run WebAssembly on React Native?
 
-Up until recently, no.
-Not on the most popular framework for building cross-platform mobile apps.
+I see it in your eyes: Confusion ... despair
+[click] Doesn't WebAssembly already run everywhere?
+[click] Well ... sort of - it's complicated.
 
 Good news: The gap is closing and in this talk we'll share recent advancements in bringing WebAssembly to React Native.
 
