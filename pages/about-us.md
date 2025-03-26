@@ -46,6 +46,14 @@ Senior Software Developer @ Callstack
 
 <v-clicks>
 
+- Interested in anything programming related
+  - Web
+  - Mobile apps
+  - Low-level juicy internals
+- Working in incubator team @ Callstack
+  - Improving developer experience
+  - Testing innovative approaches
+- `@rob_pasinski` on X/Twitter
 - `@rpasinski.pl` on Bluesky 🦋
 
 </v-clicks>
