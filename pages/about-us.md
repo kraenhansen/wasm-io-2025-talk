@@ -6,7 +6,7 @@ transition: null
 
 # Kræn Hansen
 
-Senior Software Engineer @ MongoDB
+Senior Software Engineer @ <img src="../mongodb-logo.svg" style="height:1.5rem;display:inline-block;vertical-align:middle;" />
 
 <v-clicks>
 
@@ -19,7 +19,7 @@ Senior Software Engineer @ MongoDB
   - Universal code
   - React Native
   - TypeScript
-  - Sponsored by Callstack
+  - Sponsored by <img src="../callstack-longlogo.svg" style="height:1.5rem;display:inline-block;vertical-align:-0.4rem;" />
 - `@kraenhansen.dk` on Bluesky 🦋
 
 </v-clicks>
@@ -29,8 +29,8 @@ First, a bit about myself.
 
 [click] I help build developer tools at MongoDB, primarily Compass, an Electron based GUI to query and administer a database cluster.
 [click] I help maintain the Atlas Device SDK for TypeScript (formerly Realm JS). Lots of TypeScript, a bit of C++, supports multiple runtime environments, operating systems and JavaScript engines.
-[click] Outside of work, I'm a proud father of two 6yos and a 2yo toddler - all girls.
-[click] Besides my work at MongoDB (where I work ~ 30 hours per week) and family I like to build in the public.
+[click] Outside of work, I'm a proud father of two 6yos and a 2yo toddler - all girls. And I live in Roskilde, just west of Copenhagen in Denmark.
+[click] Besides spending time with my family and my work at MongoDB (where I work ~ 30 hours per week), I like to build in the public. For this work, I accept sponsorships on GitHub - by Callstack in particular.
 [click] Write to me on Bluesky - any feedback is appreciated.
 
 -->
@@ -43,7 +43,7 @@ transition: null
 
 # Robert Pasiński
 
-Senior Software Developer @ Callstack
+Senior Software Developer at <img src="../callstack-longlogo.svg" style="height:1.5rem;display:inline-block;vertical-align:-0.4rem;" />
 
 <v-clicks>
 

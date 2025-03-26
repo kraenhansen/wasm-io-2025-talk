@@ -7,19 +7,20 @@
 }
 
 html.dark {
-  /*--slidev-code-background: rgba(0, 0, 0, 0.4);*/
+  --slidev-code-background: rgba(0, 0, 0, 0.4);
 }
 
 .slidev-layout {
-  /*background: var(--slate-blue);*/
+  background: var(--slate-blue);
   font-family: "Lexend Deca", sans-serif;
 
   h1, h2, h3, h4 {
     font-family: "Source Serif 4", serif;
-    /*color: white;*/
+    color: white;
+    font-weight: 400;
   }
 
-  p, li {
+  p, li, div {
     font-weight: 200;
   }
 }
