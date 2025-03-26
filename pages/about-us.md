@@ -19,6 +19,7 @@ Senior Software Engineer @ MongoDB
   - Universal code
   - React Native
   - TypeScript
+  - Sponsored by Callstack
 - `@kraenhansen.dk` on Bluesky 🦋
 
 </v-clicks>

@@ -19,7 +19,7 @@ fonts:
   </div>
   <div>
     <p>Robert Pasiński</p>
-    <img src="./callstack-logo.webp" style="height:2rem;margin:auto;" />
+    <img src="./callstack-longlogo.svg" style="height:2rem;margin:auto;" />
   </div>
 </div>
 
