@@ -30,6 +30,7 @@ Your session: standard talks are 30min long, we recommend leaving some minutes f
 
 ## Outline
 
+- WebAssembly is not everywhere.
 - About us (2 min)
  - Kræn [Kræn]
  - Robert [Robert]
@@ -50,6 +51,7 @@ Your session: standard talks are 30min long, we recommend leaving some minutes f
 ---
 
   - Why WASM in React Native? [Robert] (5 min)
+    - Why not? We don't need it.
     - A future of universal apps and libraries:
       - Having a single target for native modules (across OS, architectures and web) is awesome.
       - Libraries with existing WASM targets.
@@ -92,4 +94,5 @@ Your session: standard talks are 30min long, we recommend leaving some minutes f
 - CTA
  - You can ship WASM for React Native (Still early)
  - What future would you like to see?
+ - Let's collaborate on bringing your libraries onto React Native.
  - Questions?
