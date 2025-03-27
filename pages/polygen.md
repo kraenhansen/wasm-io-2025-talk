@@ -265,7 +265,7 @@ void on_click() {
 use bindings::webapi::wami::notifications::Notification;
 use bindings::webapi::wami::notifications::show_notification;
 
-fn main() {
+fn on_click() {
     let result = show_notification(Notification { 
         title: "Test!"
         // ... 
