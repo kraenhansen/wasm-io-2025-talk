@@ -6,7 +6,9 @@ transition: null
 # Why WASM in React Native?
 
 <!--
-Robert for 5 minutes.
+(Robert for 5 minutes.)
+
+So why use WebAssembly in React Native?
 -->
 
 ---
@@ -14,7 +16,11 @@ layout: section
 transition: null
 ---
 
+<v-click>
+
 # Truly universal apps
+
+</v-click>
 
 <v-click>
 
@@ -23,11 +29,14 @@ transition: null
 </v-click>
 
 <!--
-Our goal? To create truly universal apps.
 
-[click] We at Callstack love React, and we have this goal,
-we call React Universe, where you can use React to create truly
-universal apps on any platform.
+To answer this question, on why.
+
+[click] To reach the goal of truly universal apps, that work seamlessly across web and mobile.
+
+[click] We, at Callstack love React, and we have this ambitious goal,
+which we refer to as React Universe, where you can use React everywhere, 
+to create truly universal apps that run on any platform.
 -->
 
 ---
@@ -36,14 +45,18 @@ universal apps on any platform.
 
 <div style="display: flex; flex: 1; gap: 40px; flex-direction: row; justify-content: center; margin-top: 150px;">
 
-<v-click><img src="../react-logo.png" width="180" /></v-click>
+<v-click><img src="../react-logo.png" style="width: 200px; height: 200px;" /></v-click>
 <v-click><span style="font-size: 140px; color: white;">+</span></v-click>
-<v-click><img src="../wa-logo.png" width="180" /></v-click>
+<v-click><img src="../wa-logo.png" width="180" height="180" /></v-click>
 </div>
 
 <!--
-So how can we achieve this? One of the ways is to embrace the WebAssembly,
-and its growing ecosystem.
+So how can we achieve this?
+
+[click] We have react native
+[click] and
+[click] 
+we embrace WebAssembly ecosystem  and its growing ecosystem.
 -->
 
 ---
@@ -75,11 +88,11 @@ So where are we?
 The cool part about JS, and also the worst part, is that there are multiple environments
 your code can run in, which is hard for a package maintainer.
 
-[click] There's the biggest player, the first of the runtimes - nodejs.
-[click] You can also use one of the newer and cooler runtimes like Bun, wich is written in Zig,
-[click] or deno, written in rust.
+[click] There's the biggest player on the block, the first of the runtime of this kind - NodeJS.
+[click] You can also use one of the newer and cooler runtimes like Bun, which is written in Zig,
+[click] or deno which written in rust.
 
-And also the browser, which is also a valid environment.
+And there's also the browser, which I'd say is the biggest environment right now.
 -->
 
 ---
@@ -94,12 +107,15 @@ And also the browser, which is also a valid environment.
 
 <!--
 
-One thing that they have in common, and what is widely used, is the npm.
-However, the packages are not guaranteed to run between the runtimes.
-Most of them do, but not all. And let's not forget the browser.
+One thing that lays at the core of the ecosystem is the npm registry.
+This is how you distribute the packages.
 
-So one of the issues is that packages can depend on WebAPIs, or NodeAPI. Neither of
-which is supported by React Native currently.
+However, you have one big registry, and packages that support many runtimes and environments.
+Most of them do, but not all. Which complicates things.
+
+So one of the issues is that packages can depend on WebAPIs, or NodeAPI for native extensions for NodeJS. 
+Neither of which is supported by React Native currently.
+
 -->
 
 ---
@@ -133,12 +149,14 @@ This is needed to access native UI components.
 [click]
 You can access and extend the JavaScript environment through the JavaScript Interface,
 which abstracts away various JS engines (JSC and Hermes).
+
+[click] We write the TypeScript contract for the API.
 [click]
 Rather than writing it all by hand, we use a tool called codegen.
 [click]
+
 This reads the TypeScript (or Flow) spec and generates the bridging boilerplate code,
 which is for you to implement.
-[click]
 Also, complex types are automatically bridged between TypeScript and native types.
 -->
 
@@ -165,6 +183,11 @@ export default TurboModuleRegistry.getEnforcing<Spec>(
 
 <!--
 This is a simple example of a LocalStorage module spec. This acts as a contract.
+
+We create an interface, which extends the TurboModule interface.
+We define the functions, the types.
+
+And then we export a bridge that is typesafe, and exports an object that calls the native functions.
 -->
 
 ---
@@ -194,7 +217,11 @@ public:
 The generated code looks more or less like this. 
 There is more code which is not really important to us right now.
 
-What we should do next, is to extend this class and implement the methods.
+We is important, is that we are provided with an abstract class, that we need to extend
+and implement the method bodies.
+
+As you can see, the generated code uses the native types (std::optional, and std::string) rather
+than JS engine types.
 -->
 
 ---
@@ -209,12 +236,15 @@ What we should do next, is to extend this class and implement the methods.
     - Cocoapods for iOS
 - Gets complicated quickly when using other languages
 - You need to expose JS functions manually (writing the Spec)
+- <strong>Lots of languages and tools</strong>
 
 </v-clicks>
 
 <!--
 
 [click] One of the biggest shortcomings is that this approach does not cover the Web.
+You write turbo modules for react native, and for web you need to use different approach.
+
 [click] When integrating external libraries, you need to integrate their build system.
 [click] For android, this is Gradle with CMake, [click] for iOS it's Cocoapods.
 
@@ -222,6 +252,9 @@ What we should do next, is to extend this class and implement the methods.
 
 [click] When trying to expose native library to JS, you need to write the spec, expose the library functions
 manually. And on top of that, you need to maintain it.
+
+[click] This exposes, you, the developer, for multitude of languages and tools that can quickly
+get overwhelming.
 
 -->
 

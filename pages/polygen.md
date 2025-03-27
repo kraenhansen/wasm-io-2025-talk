@@ -31,7 +31,8 @@ transition: null
 <!--
 Robert for 10 minutes.
 
-Fresh off the oven, [click] still experimental.
+And we want to introduce our newest project, Polygen.
+It fresh off the oven, [click] still experimental.
 -->
 
 ---
@@ -46,13 +47,20 @@ What is it?
   - Highly performant
   - WebAPI compatible
 - Alternative to TurboModules
+  - Simplifies embedding of third party modules 
 
 </v-clicks>
 
 <!--
 [click] Polygen is our new approach to running WebAssembly in React Native. 
-[click] It is a highly performant solution (more on that in a second), that is compatible with the WebAPI. 
-[click] It is an alternative to TurboModules.
+
+[click] It is a highly performant solution that uses codegen (more on that in a second),
+
+[click] that is compatible with the WebAPI, we all know and love.
+
+[click] It can be seen as an alternative to TurboModules.
+
+[click] It simplifies consuming and embedding of third party modules, a lot .
 -->
 
 ---
@@ -73,9 +81,14 @@ How it works?
 </v-clicks>
 
 <!--
-[click] It is super-fast, [click] because it compiles WebAssembly to C using the all wonderful `wasm2c` tool, from WebAssembly Binary Toolkit.
 
-[click] To connect it with React Native, the generated code is glued with JSI (JavaScript interface)
+So let's talk a bit about how it works.
+
+[click] As I mentioned before it is really fast, achieving near native performance.
+
+[click] This is because it compiles WebAssembly to C, using the all wonderful `wasm2c` tool, from WebAssembly Binary Toolkit.
+
+[click] To connect it with React Native, the generated code is glued with JSI (JavaScript interface). This glue code is also generated
 
 [click] Ahead of time compilation allows for near native performance.
 
@@ -95,20 +108,24 @@ What it enables?
 - Write universal (native & web) apps with ease
 - Brings growing WebAssembly ecosystem to React Native
 - Writing Polyglot business logic
-  - Rust|Go in the core, React/TypeScript in the UI
+  - Rust | Go in the core, React/TypeScript in the UI
 
 </v-clicks>
 
 <!--
-[click] It is truly universal.
 
-[click] You can easily bring your web app to native, [click] or your native app to the web.
+[click] It is truly universal. Your apps work on Web and native seamlessly.
 
-[click] You can use existing WebAssembly libraries in React Native. One of such examples is a crypto library, which is not provided in react native.
+[click] You can use existing WebAssembly ecosystem in React Native. One of such examples is a crypto library, 
+which is not provided in react native out of the box.
 
-[click] Finally, you can extend react native functionality with languages other than C++
+[click] Finally, you can extend react native functionality with languages other than C++,
+or write business logic.
+
+By the way, the project name comes from the word "polyglot" and "codegen".
 
 [click] Any language that compiles into WASM can be used, obviously.
+We get best of both worlds, React for UI, the language you like for business logic.
 -->
 
 ---
@@ -162,9 +179,10 @@ Bringing your React Native App to Web
 <!--
 
 As you can see, polygen does pretty well thanks to wasm2c performance.
-There's some calling overhead at the lower numbers, but it outperforms safari slightly.
+There's some calling overhead at the lower fibonacci sequences, but it outperforms safari slightly at higher numbers.
 
-There's still a room for improvement, but it's a good start.
+There's still a room for improvements, but it's a good start.
+We can probably squeeze some more performance out of it.
 
 -->
 
@@ -188,7 +206,9 @@ There's still a room for improvement, but it's a good start.
 [click] Threading, simd and more of them
 
 [click] We'd love to explore adding support for more WASM runtimes,
-mostly for Android or desktop platforms, due to JIT limitations on IOS.
+[click] like wasmer [click] wasmtime and [click] more.
+
+Mostly for Android or desktop platforms, due to JIT limitations on IOS.
 -->
 
 ---
@@ -232,7 +252,13 @@ interface notification {
 </v-click>
 
 <!--
-And, thanks to the webassembly tools, we could leverage those APIs in different languages.
+There are many more opportunities for the future we want to play with and discover.
+
+[click] One of those areas are WebAssembly components. We could use WIT to
+expose UI APIs to webassembly modules to allow us to write the apps in various languages.
+
+[click] Imagine system's calendar API exposed to webassembly module using WIT.
+Calendars are available in mobile devices and desktop platforms.  
 
 [click] Or, as an alternative example, consider Notifications API.
 -->
@@ -277,6 +303,13 @@ fn on_click() {
 
 </div>
 
+<!--
+
+Imagine using system's native APIs, from Rust or C accessed
+through WebAssembly interface.
+
+-->
+
 ---
 
 # WebAPIs
@@ -311,5 +344,7 @@ Let's quickly talk about WebAPIs.
 [click] Here's an example of a snippet of web crypto API.
 
 So imagine writing native apps, in rust, using WebAPIs
-without the browser. Wild.
+without the browser.
+
+We could, for example, generate WITs from WebIDL.
 -->

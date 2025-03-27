@@ -47,6 +47,7 @@ Senior Software Developer at <img src="../callstack-longlogo.svg" style="height:
 
 <v-clicks>
 
+- Based in Szczecin, Poland 🇵🇱
 - Interested in anything programming related
   - Web
   - Mobile apps
@@ -60,5 +61,16 @@ Senior Software Developer at <img src="../callstack-longlogo.svg" style="height:
 </v-clicks>
 
 <!--
+
+My name is Robert, I am Senior Software Developer at callstack 
+
+[click] Based in Szczecin, Poland 🇵🇱.
+[click] I am a programming enthusiast, interested in anything programming related.
+Stared my journey from web development, moved to native programming and developing mobile apps.
+Always interested in low-level juicy internals.
+[click] I am working in Incubator team @ Callstack,
+where we focus on improving developer experience and creating innovative ideas.
+Our goal is to make developers life easier and ecosystem even better.
+[click] You can find me on Twitter [click] and Bluesky.
 
 -->
