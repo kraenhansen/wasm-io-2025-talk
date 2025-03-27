@@ -10,6 +10,99 @@ Robert for 5 minutes.
 -->
 
 ---
+layout: section
+transition: null
+---
+
+# Truly universal apps
+
+<v-click>
+
+## React Universe
+
+</v-click>
+
+<!--
+Our goal? To create truly universal apps.
+
+[click] We at Callstack love React, and we have this goal,
+we call React Universe, where you can use React to create truly
+universal apps on any platform.
+-->
+
+---
+
+# How to achieve this?
+
+<div style="display: flex; flex: 1; gap: 40px; flex-direction: row; justify-content: center; margin-top: 150px;">
+
+<v-click><img src="../react-logo.png" width="180" /></v-click>
+<v-click><span style="font-size: 140px; color: white;">+</span></v-click>
+<v-click><img src="../wa-logo.png" width="180" /></v-click>
+</div>
+
+<!--
+So how can we achieve this? One of the ways is to embrace the WebAssembly,
+and its growing ecosystem.
+-->
+
+---
+
+# The environment
+
+<div style="display: flex; flex: 1; gap: 40px; flex-direction: column; align-items: center; margin-top: 50px;">
+<v-click>
+<img src="../nodejs-logo.png" width="240" />
+</v-click>
+
+<div style="display: flex; gap: 40px; flex-direction: row; align-items: center; margin-top: 40px;">
+
+<v-click>
+<img src="../bun-logo.png" width="150" />
+</v-click>
+
+<v-click>
+<img src="../deno-logo.png" width="120" />
+</v-click>
+
+</div>
+</div>
+
+<!--
+
+So where are we?
+
+The cool part about JS, and also the worst part, is that there are multiple environments
+your code can run in, which is hard for a package maintainer.
+
+[click] There's the biggest player, the first of the runtimes - nodejs.
+[click] You can also use one of the newer and cooler runtimes like Bun, wich is written in Zig,
+[click] or deno, written in rust.
+
+And also the browser, which is also a valid environment.
+-->
+
+---
+
+# The ecosystem
+
+<div style="display: flex; flex-direction: column; align-items: center; margin-top: 150px;">
+
+<img src="../npm-logo.png" width="400" />
+
+</div>
+
+<!--
+
+One thing that they have in common, and what is widely used, is the npm.
+However, the packages are not guaranteed to run between the runtimes.
+Most of them do, but not all. And let's not forget the browser.
+
+So one of the issues is that packages can depend on WebAPIs, or NodeAPI. Neither of
+which is supported by React Native currently.
+-->
+
+---
 
 # Status quo
 
@@ -29,7 +122,8 @@ Extending React Native with native code
 <!--
 (1 min)
 
-So let's talk how things are done today.
+So how is it as of today?
+
 [click]
 You can already extend React Native with native functionalities using what's
 called Turbo Modules 
@@ -105,7 +199,7 @@ What we should do next, is to extend this class and implement the methods.
 
 ---
 
-# The shortcomings
+# The shortcomings of TurboModules
 
 <v-clicks depth="2">
 
@@ -118,7 +212,7 @@ What we should do next, is to extend this class and implement the methods.
 
 </v-clicks>
 
-<!-- 
+<!--
 
 [click] One of the biggest shortcomings is that this approach does not cover the Web.
 [click] When integrating external libraries, you need to integrate their build system.

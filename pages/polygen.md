@@ -5,6 +5,12 @@ transition: null
 
 # Polygen
 
+<v-click>
+
+## Still Experimental ⚠️
+
+</v-click>
+
 <!--
 - Wrapping the WebAssembly Binary Toolkit's `wasm2c` (matches the AOT capabilities of React Native)
 - Code generation of a JSI bridge to expose imports and exports
@@ -24,6 +30,8 @@ transition: null
 
 <!--
 Robert for 10 minutes.
+
+Fresh off the oven, [click] still experimental.
 -->
 
 ---
@@ -85,9 +93,7 @@ What it enables?
 <v-clicks depth="2">
 
 - Write universal (native & web) apps with ease
-  - Bringing React Web apps to Native
-  - Bringing Native apps to Web
-- Brings WebAssembly library ecosystem to React Native
+- Brings growing WebAssembly ecosystem to React Native
 - Writing Polyglot business logic
   - Rust|Go in the core, React/TypeScript in the UI
 
@@ -107,7 +113,60 @@ What it enables?
 
 ---
 
+# Polygen
+
+Bringing your Web App to React Native
+
+<v-clicks depth="2">
+
+- You have a WebApp 
+  - It uses WebAssembly modules
+- You want to bring it to React Native
+- Polygen allows you to do that 🚀
+
+</v-clicks>
+
+<!--
+[click] So lets say you have a web app
+[click] You native webassembly modules, for advanced computations
+[click] You want to make a mobile app of it
+[click] Polygen allows you to do that
+-->
+
+---
+
+# Polygen
+
+Bringing your React Native App to Web
+
+<v-clicks depth="2">
+
+- You have a React Native App
+  - You need native functionality (e.g. TurboModules)
+- You want to make a Web app version
+- Polygen allows you to do that
+
+</v-clicks>
+
+<!--
+[click] So lets say you have a RN app
+[click] You need to use native functionality, using TurboModules
+[click] You want to make a web app version of it
+[click] TurboModules are RN only, webassembly saves the day!
+-->
+
+---
+
 <BenchmarkResults filterSeries="['Wasmer using JSC', 'Safari', 'Polygen']" />
+
+<!--
+
+As you can see, polygen does pretty well thanks to wasm2c performance.
+There's some calling overhead at the lower numbers, but it outperforms safari slightly.
+
+There's still a room for improvement, but it's a good start.
+
+-->
 
 ---
 
@@ -117,22 +176,140 @@ What it enables?
 
  - Complete support for WASM features
    - Threading, SIMD, ...
- - WebAssembly Mobile Interface (WAMI?)
-   - Notifications
-   - Contacts
-   - Location
-   - ...
- - Multiple runtimes (wasmer, wasmtime)
+ - Multiple runtimes
+   - wasmer
+   - wasmtime
+   - and more
 
 </v-clicks>
 
 <!--
 [click] Bring support for missing or untested WASM features.
-[click]
+[click] Threading, simd and more of them
 
-[click] Expose mobile app interface to WebAssembly modules.
-[click] [click] [click] [click]
+[click] We'd love to explore adding support for more WASM runtimes,
+mostly for Android or desktop platforms, due to JIT limitations on IOS.
+-->
 
-[click] Add support for more WASM runtimes (mostly for Android or desktop platforms)
+---
 
+# Future plans
+
+<v-click>
+
+<p>WebAssembly Mobile Interface (WAMI)</p>
+
+</v-click>
+
+<v-click>
+
+```wit
+package wami:common;
+
+interface calendar {
+    record CalendarEvent {
+        // ...
+    }
+    
+    add-event: func(event: CalendarEvent) -> result<bool>;
+}
+```
+
+</v-click>
+
+<v-click>
+ 
+```wit
+interface notification {
+    record Notification {
+        // ...
+    }
+    
+    show-notification: func(event: Notification) -> result<NotificationHandle>;
+}
+```
+
+</v-click>
+
+<!--
+And, thanks to the webassembly tools, we could leverage those APIs in different languages.
+
+[click] Or, as an alternative example, consider Notifications API.
+-->
+
+---
+
+# The future
+
+<div style="display: flex; flex-direction: row; justify-content: space-between; gap: 10px;">
+
+<div>
+
+### C
+```c
+#include "wami/notifications.h"
+
+void on_click() {
+    wami_notification_t notification;
+    notification.title = "Test";
+    
+    wami_notification_show_notification(&notification);
+}
+```
+
+</div>
+<div>
+
+### Rust
+```rust
+use bindings::webapi::wami::notifications::Notification;
+use bindings::webapi::wami::notifications::show_notification;
+
+fn on_click() {
+    let result = show_notification(Notification { 
+        title: "Test!"
+        // ... 
+    });
+}
+```
+
+</div>
+
+</div>
+
+---
+
+# WebAPIs
+
+<v-click>
+The IDLs are already there!
+</v-click>
+
+<v-click>
+ 
+```csharp
+partial interface mixin WindowOrWorkerGlobalScope {
+  [SameObject] readonly attribute Crypto crypto;
+};
+
+[Exposed=(Window,Worker)]
+interface Crypto {
+  [SecureContext] readonly attribute SubtleCrypto subtle;
+  ArrayBufferView getRandomValues(ArrayBufferView array);
+  [SecureContext] DOMString randomUUID();
+};
+```
+
+</v-click>
+
+<!--
+
+Let's quickly talk about WebAPIs.
+
+[click] The WebAPIs are already defined using IDL called WebIDL.
+
+[click] Here's an example of a snippet of web crypto API.
+
+So imagine writing native apps, in rust, using WebAPIs
+without the browser. Wild.
 -->
