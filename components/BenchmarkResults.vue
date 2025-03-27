@@ -132,7 +132,7 @@ const option = {
   series: [
     {
       type: "line",
-      name: "Wasmer using JSC (initially)",
+      name: "Wasmer using JSC (unoptimized)",
       data: Object.entries(WASMER_JSC_UNOPTIMIZED_DEV),
     },
     {

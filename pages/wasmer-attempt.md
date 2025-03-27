@@ -21,10 +21,10 @@ in a native module for React Native
 - A TypeScript wrapper calling into a native module
 - A native module calling from C++ into the Wasmer C-API (wasm.h)
 - A small build CLI wrapping the Cargo CLI and Xcode build tools, to produce an XCFramework.
-- Used the JavaScriptCore feature of Wasmer
-- 👀 Very limited subset of the WebAssembly API surface (for now)
-- 👀 iOS only (for now)
-- 👀 I'm not an expert on Wasmer
+- Used the JavaScriptCore backend of Wasmer
+- ⚠️ Very limited subset of the WebAssembly API surface (for now)
+- ⚠️ iOS only (for now)
+- ⚠️ I'm not an expert on Wasmer
 - 💙 I'd be happy to share it
 
 </v-clicks>
@@ -34,7 +34,7 @@ Around October of last year, I built a proof-of-concept of wrapping Wasmer in a 
 [click] I built a simple TypeScript wrapper calling into a native module.
 [click] the native module, call from C++ into the Wasmer C-API (wasm.h) - manually consuming a C-API is painful, especially as a TypeScript developer.
 [click] a CLI builds Wasmer for iOS into an XCFramework.
-[click] Used the JavaScriptCore feature of Wasmer, to avoid relying on JIT (talking with Syrus during the conference, this might not work in production apps and is superseded by the v8 backend)
+[click] Used the JavaScriptCore backend of Wasmer, to avoid relying on JIT (talking with Syrus during the conference, this might not work in production apps and is superseded by the v8 backend)
 [click] Note: Very limited subset of the WebAssembly API surface.
 [click] Note: Worked on iOS only.
 [click] Note: I don't claim to be an export on neither Wasmer, so you shouldn't take my benchmarks too literally - I might very well have missed opportunities for optimizations.
@@ -46,7 +46,7 @@ layout: full
 transition: null
 ---
 
-<BenchmarkResults xMaximum="5" filterSeries="['Wasmer using JSC (initially)', 'Wasmer using JSC']" />
+<BenchmarkResults xMaximum="5" filterSeries="['Wasmer using JSC (unoptimized)', 'Wasmer using JSC']" />
 
 <!--
 With all those caveats and reservations out of the way, these were my initial results:
@@ -62,7 +62,7 @@ layout: full
 transition: null
 ---
 
-<BenchmarkResults xMaximum="5" filterSeries="['Wasmer using JSC', 'Safari']" />
+<BenchmarkResults xMaximum="5" filterSeries="['Wasmer using JSC (unoptimized)', 'Wasmer using JSC', 'Safari']" />
 
 <!--
 Until I compared to Safari and saw that it did 23 million ops/s.
@@ -75,7 +75,7 @@ layout: full
 transition: null
 ---
 
-<BenchmarkResults filterSeries="['Wasmer using JSC', 'Safari']" />
+<BenchmarkResults filterSeries="['Wasmer using JSC (unoptimized)', 'Wasmer using JSC', 'Safari']" />
 
 <!--
 If I would have spent a bit more time on benchmarks however,
@@ -99,6 +99,7 @@ I would have learned that most of my performance issues were from the code calli
 
 <!--
 [click] Wasmer is fast
-[click] JIT can be avoided, using specific Wasmer's backends
+[click] The overhead of calling from JavaScript into Wasmer dominates runtime for small workloads.
+[click] AOT and JIT can be tuned, using specific Wasmer's backends
 [click] It's not fun for a TypeScript developer to maintain one side of a C-bridge.
 -->
