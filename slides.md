@@ -12,10 +12,13 @@ fonts:
 
 <h1 class="text-center">Running WASM<br>in React Native apps</h1>
 
-<div class="grid grid-cols-2 gap-4 text-center">
+<div class="grid grid-cols-3 gap-4 text-center">
   <div>
     <p>Kræn Hansen</p>
     <img src="./mongodb-logo.svg" style="height:2rem;margin:auto;" />
+  </div>
+  <div class="flex flex-col justify-end">
+    <img src="./wasm-io-logo.svg" style="height:2rem;" />
   </div>
   <div>
     <p>Robert Pasiński</p>
