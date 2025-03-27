@@ -196,6 +196,13 @@ mostly for Android or desktop platforms, due to JIT limitations on IOS.
 # Future plans
 
 <v-click>
+
+<p>WebAssembly Mobile Interface (WAMI)</p>
+
+</v-click>
+
+<v-click>
+
 ```wit
 package wami:common;
 
@@ -210,16 +217,9 @@ interface calendar {
 
 </v-click>
 
-<!--
-And, thanks to the webassembly tools, we could leverage those APIs in different languages.
--->
----
-
-# WAMI
-
+<v-click>
+ 
 ```wit
-package wami:common;
-
 interface notification {
     record Notification {
         // ...
@@ -229,14 +229,64 @@ interface notification {
 }
 ```
 
+</v-click>
+
 <!--
-Or, as an alternative example, consider Notifications API.
+And, thanks to the webassembly tools, we could leverage those APIs in different languages.
+
+[click] Or, as an alternative example, consider Notifications API.
 -->
+
+---
+
+# The future
+
+<div style="display: flex; flex-direction: row; justify-content: space-between; gap: 10px;">
+
+<div>
+
+### C
+```c
+#include "wami/notifications.h"
+
+void on_click() {
+    wami_notification_t notification;
+    notification.title = "Test";
+    
+    wami_notification_show_notification(&notification);
+}
+```
+
+</div>
+<div>
+
+### Rust
+```rust
+use bindings::webapi::wami::notifications::Notification;
+use bindings::webapi::wami::notifications::show_notification;
+
+fn main() {
+    let result = show_notification(Notification { 
+        title: "Test!"
+        // ... 
+    });
+}
+```
+
+</div>
+
+</div>
 
 ---
 
 # WebAPIs
 
+<v-click>
+The IDLs are already there!
+</v-click>
+
+<v-click>
+ 
 ```csharp
 partial interface mixin WindowOrWorkerGlobalScope {
   [SameObject] readonly attribute Crypto crypto;
@@ -250,8 +300,14 @@ interface Crypto {
 };
 ```
 
+</v-click>
+
 <!--
-The WebAPIs are already defined using IDL called WebIDL.
+
+Let's quickly talk about WebAPIs.
+
+[click] The WebAPIs are already defined using IDL called WebIDL.
+
 [click] Here's an example of a snippet of web crypto API.
 
 So imagine writing native apps, in rust, using WebAPIs
