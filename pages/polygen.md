@@ -161,6 +161,11 @@ Bringing your React Native App to Web
 
 <!--
 
+As you can see, polygen does pretty well thanks to wasm2c performance.
+There's some calling overhead at the lower numbers, but it outperforms safari slightly.
+
+There's still a room for improvement, but it's a good start.
+
 -->
 
 ---
