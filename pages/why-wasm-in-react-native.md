@@ -217,7 +217,7 @@ public:
 The generated code looks more or less like this. 
 There is more code which is not really important to us right now.
 
-We is important, is that we are provided with an abstract class, that we need to extend
+What is important, is that we are provided with an abstract class, that we need to extend
 and implement the method bodies.
 
 As you can see, the generated code uses the native types (std::optional, and std::string) rather
