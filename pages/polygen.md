@@ -126,6 +126,13 @@ Bringing your Web App to React Native
 
 </v-clicks>
 
+<!--
+[click] So lets say you have a web app
+[click] You native webassembly modules, for advanced computations
+[click] You want to make a mobile app of it
+[click] Polygen allows you to do that
+-->
+
 ---
 
 # Polygen
@@ -141,9 +148,20 @@ Bringing your React Native App to Web
 
 </v-clicks>
 
+<!--
+[click] So lets say you have a RN app
+[click] You need to use native functionality, using TurboModules
+[click] You want to make a web app version of it
+[click] TurboModules are RN only, webassembly saves the day!
+-->
+
 ---
 
 <BenchmarkResults />
+
+<!--
+
+-->
 
 ---
 
@@ -234,7 +252,3 @@ The WebAPIs are already defined using IDL called WebIDL.
 So imagine writing native apps, in rust, using WebAPIs
 without the browser. Wild.
 -->
-
----
-
-# 
