@@ -107,7 +107,7 @@ What it enables?
 
 ---
 
-<BenchmarkResults />
+<BenchmarkResults filterSeries="['Wasmer using JSC', 'Safari', 'Polygen']" />
 
 ---
 

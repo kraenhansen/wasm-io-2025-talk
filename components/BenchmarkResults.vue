@@ -132,6 +132,11 @@ const option = {
   series: [
     {
       type: "line",
+      name: "Wasmer using JSC (initially)",
+      data: Object.entries(WASMER_JSC_UNOPTIMIZED_DEV),
+    },
+    {
+      type: "line",
       name: "Wasmer using JSC",
       data: Object.entries(WASMER_JSC),
     },
