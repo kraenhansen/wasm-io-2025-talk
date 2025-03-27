@@ -25,7 +25,7 @@ Senior Software Engineer @ <img src="../mongodb-logo.svg" style="height:1.5rem;d
 </v-clicks>
 
 <!--
-First, a bit about myself.
+First, a bit about myself. My name is Kræn - I'm a senior software engineer at MongoDB.
 
 [click] I help build developer tools at MongoDB, primarily Compass, an Electron based GUI to query and administer a database cluster.
 [click] I help maintain the Atlas Device SDK for TypeScript (formerly Realm JS). Lots of TypeScript, a bit of C++, supports multiple runtime environments, operating systems and JavaScript engines.

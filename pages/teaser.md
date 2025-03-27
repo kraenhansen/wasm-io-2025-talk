@@ -13,11 +13,10 @@ transition: null
 </v-clicks>
 
 <!--
-Kræn: Can you actually run WebAssembly on React Native?
-
-I see it in your eyes: Confusion ... despair
+Kræn:  I see it in your eyes: Confusion, despair.
 [click] Doesn't WebAssembly already run everywhere?
-[click] Well ... sort of, prior art required serialization of data, used the old React Native architecture or supported a limited set of WASM features.
+Doesn't WebAssembly already run in React Native apps?
+[click] Well ... sort of, prior art required serialization of data, used an old architecture of React Native or are limited in the set of WASM features supported.
 
 Good news: The gap is closing and in this talk we'll share recent advancements in bringing WebAssembly to React Native.
 

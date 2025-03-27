@@ -157,7 +157,7 @@ Bringing your React Native App to Web
 
 ---
 
-<BenchmarkResults />
+<BenchmarkResults filterSeries="['Wasmer using JSC', 'Safari', 'Polygen']" />
 
 <!--
 
