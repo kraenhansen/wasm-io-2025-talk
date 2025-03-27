@@ -44,7 +44,8 @@ and less familiar with React Native.
 <img width="80%" src="../react-native-devices.png" class="m-a p-10" />
 
 <!--
-In it's essence, it's a tool-kit to enable building cross-platform native apps, written mainly in JavaScript / TypeScript, which run on
+In it's essence, it's a toolkit to build cross-platform native apps,
+written mainly in JavaScript / TypeScript, which run on
 - iOS
 - Android
 - Desktop macOS / Windows
@@ -83,8 +84,10 @@ const Counter = () => {
 -->
 
 <!--
-One part of React Native is React:
-As it's built around the most popular framework for building reactive UIs.
+One part of "React Native" is React:
+
+It's built around the most popular framework for building reactive UIs.
+Enabling a delightful user experience with a native look and feel.
 -->
 
 ---
@@ -111,6 +114,7 @@ const Counter = () => {
 
 <!--
 The other part of "React Native" is Native:
+
 The application UI are composed of the actual native views provided by the platform.
 -->
 
@@ -128,7 +132,8 @@ The application UI are composed of the actual native views provided by the platf
 
 <!--
 In the context of this talk, there's a few details I want to highlight:
-[click] The default JavaScript engine for React Native apps is Hermes - a JavaScript Engine built by Meta for React Native. Focused on first-time-to-interactive.
+[click] The default JavaScript engine for React Native apps used to be JavaScriptCore and used async message-passing between JavaScript and "native code"
+[click] Nowadays Hermes is the default JavaScript engine - built by Meta specifically for React Native. Focused on first-time-to-interactive.
 [click] Hermes brings almost no runtime APIs and doesn't bring WebAssembly - in particular.
 -->
 
