@@ -45,9 +45,9 @@ to create truly universal apps that run on any platform.
 
 <div style="display: flex; flex: 1; gap: 40px; flex-direction: row; justify-content: center; margin-top: 150px;">
 
-<v-click><img src="../react-logo.png" height="200" /></v-click>
+<v-click><img src="../react-logo.png" style="height:200px;" /></v-click>
 <v-click><span style="font-size: 140px; color: white;">+</span></v-click>
-<v-click><img src="../wa-logo.png" height="200" /></v-click>
+<v-click><img src="../wa-logo.png" style="height:200px;" /></v-click>
 </div>
 
 <!--
